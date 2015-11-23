@@ -1,0 +1,41 @@
+extends layout
+block header
+  -//script(src='https://rawgit.com/buberdds/angular-bootstrap-colorpicker/master/js/bootstrap-colorpicker-module.js')
+block content
+  div(ng-controller='contr',ng-init='init()')
+    small.errors {{errores}}
+    h2  Actual
+    ul
+      li(ng-repeat="map in maps")
+        b: small {{map._id}}: 
+        |{{map.name}} - {{map.type}}, {{map.primary}}
+    
+    hr
+    h2 POST-Insert
+    label name:
+      input(type='text',ng-model='toSave.name')  
+    label type:
+      input(type='text',ng-model='toSave.type')  
+    label primary
+      input(type="checkbox",ng-model='toSave.primary')
+    button(ng-click="saveMap()") save
+    
+    hr
+    h2 Update
+    label selec to update
+      select(ng-options="map as map.name for map in maps",ng-model="toUpdate.map",ng-change="selectUpdate()")
+    label name
+      input(type='text',ng-model='toUpdate.name')  
+    label type
+      input(type='text',ng-model='toUpdate.type')  
+    label primary
+      input(type='checkbox',ng-model='toUpdate.primary')  
+    button(ng-click="updateMap()") update
+    
+    
+    hr
+    h2 Delete
+    label Delete:
+      select(ng-options="map as map.name for map in maps",ng-model="toDelete")
+    button(ng-click="deleteMaps()") Delete
+    

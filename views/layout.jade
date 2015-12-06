@@ -3,17 +3,23 @@ html(lang='en-us')
   head
     meta(charset='utf-8')
     title Hello...
-    script(src='/jquery/jquery-2.1.4.min.js')
+    script(src='/jquery/dist/jquery.min.js')
+    
     script(src='/angular/angular.min.js')
-    -//script(src='/angularjs/angular-animate.min.js')
+    script(src='/angular/angular-animate.min.js')
+    
     -//script(src='/material-design-lite/material.min.js')
     -//link(rel='stylesheet', href='/material-design-lite/material.min.css', type='text/css')
+    
+    -//script(src='/angular-bootstrap/ui-bootstrap-tpls-0.14.3.js')
+    -//link(rel='stylesheet', href='bootstrap/css/bootstrap.min.css', type='text/css')
     -//script(src='/angular-bootstrap/ui-bootstrap.min.js')
     -//link(rel='stylesheet', href='angular-bootstrap/ui-bootstrap-csp.css', type='text/css')
-    -//link(rel='stylesheet', href='bootstrap/css/bootstrap.min.css', type='text/css')
+    
     block header
+    
     script(src='/js/js.js')
     link(rel='stylesheet', href='css/style.css', type='text/css')
   
-  body(ng-app='gApp')
+  body
     block content

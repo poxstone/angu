@@ -1,20 +1,24 @@
 // create angular app
-var app = angular.module('gApp', []);
+(function(){
+'use strict';
+angular.module('app', [])
+.controller('ConttlCrud',ConttlCrud);
 
-app.controller('contr',function($scope,$http){
-	var sc= $scope;
-	sc.errores= [{name:'no hay'}];
+function ConttlCrud($http){
+	var vm = this;//$scope
+	vm.pr='gato';
+	vm.errores= [{name:'no hay'}];
 	
 	//models empty
-	sc.modelSave= {
+	vm.modelSave= {
 		name: '',
 		type: '',
 		primary: null
 	};
-	sc.modelDelete= {
+	vm.modelDelete= {
 		id: null
 	};
-	sc.modelUpdate= {
+	vm.modelUpdate= {
 		map: {},
 		name: '',
 		type: '',
@@ -22,24 +26,25 @@ app.controller('contr',function($scope,$http){
 	};
 	
 	//initialized
-	sc.init = function(){
+	vm.init = function(){
 	    //call it here
-		sc.toSave = angular.copy(sc.modelSave);
-		sc.toDelete = angular.copy(sc.modelDelete);
-		sc.toUpdate = angular.copy(sc.modelUpdate);
-		sc.getMaps();
+		vm.toSave = angular.copy(vm.modelSave);
+		vm.toDelete = angular.copy(vm.modelDelete);
+		vm.toUpdate = angular.copy(vm.modelUpdate);
+		vm.getMaps();
 	};
+	
 	//select edit object
-	sc.selectUpdate= function(){
+	vm.selectUpdate= function(){
 
-		sc.toUpdate.name = sc.toUpdate.map.name;
-		sc.toUpdate.type = sc.toUpdate.map.type;
-		sc.toUpdate.primary = sc.toUpdate.map.primary;
+		vm.toUpdate.name = vm.toUpdate.map.name;
+		vm.toUpdate.type = vm.toUpdate.map.type;
+		vm.toUpdate.primary = vm.toUpdate.map.primary;
 
 	};
 	
 	//methods
-	sc.getMaps = function(){
+	vm.getMaps = function(){
 		var req = {
 			 method: 'get',
 			 url: '/api',
@@ -52,92 +57,95 @@ app.controller('contr',function($scope,$http){
 		$http(req).then(
 
 			function(res){
-				sc.maps = res.data;
-				//sc.errores= ['status getMaps: ',res];
+				vm.maps = res.data;
+				//vm.errores= ['status getMaps: ',res];
 			},
 			function(res){
-				sc.errores= ['erro getMaps: ',res];
+				vm.errores= ['erro getMaps: ',res];
 			}
 		);
 	};
 		
-	sc.saveMap = function(){
+	vm.saveMap = function(){
 		var req = {
 			 method: 'post',
 			 url: '/api',
 			 headers: {
 			   'Content-Type': 'application/json; charset=utf-8'
 			 },
-			 data: sc.toSave
+			 data: vm.toSave
 		};
 		
 		$http(req).then(
 
 			function(res){
-				sc.maps = res.data;
-				sc.getMaps();
-				sc.toSave = angular.copy(sc.modelSave);
-				sc.errores= ['status saveMaps: ',res];
+				vm.maps = res.data;
+				vm.getMaps();
+				vm.toSave = angular.copy(vm.modelSave);
+				vm.errores= ['status saveMaps: ',res];
 				
 			},
 			function(res){
-				sc.errores= ['erro save: ',res];
+				vm.errores= ['erro save: ',res];
 			}
 		);
 	};
 	
-	sc.deleteMaps = function(){
-		console.log(sc.toDelete._id);
+	vm.deleteMaps = function(){
+		console.log(vm.toDelete._id);
 		var req = {
 			 method: 'delete',
-			 url: '/api/'+sc.toDelete._id,
+			 url: '/api/'+vm.toDelete._id,
 			 /*headers: {
 			   'Content-Type': 'application/json; charset=utf-8'
 			 },
-			 data: sc.toDelete*/
+			 data: vm.toDelete*/
 		};
 		
 		$http(req).then(
 
 			function(res){
-				sc.maps = res.data;
-				sc.getMaps();
-				//sc.toDelete = angular.copy(sc.modelDelete);
-				sc.errores= ['status deleteMaps: ',res];
+				vm.maps = res.data;
+				vm.getMaps();
+				//vm.toDelete = angular.copy(vm.modelDelete);
+				vm.errores= ['status deleteMaps: ',res];
 			},
 			function(res){
-				sc.errores= ['erro delete: ',res];
+				vm.errores= ['erro delete: ',res];
 			}
 		);
 		
 	};
 	
-	sc.updateMap = function(){
-		console.log(sc.toUpdate);
+	vm.updateMap = function(){
+		console.log(vm.toUpdate);
 		var req = {
 			 method: 'put',
-			 url: '/api/'+sc.toUpdate.map._id,
+			 url: '/api/'+vm.toUpdate.map._id,
 			 headers: {
 			   'Content-Type': 'application/json; charset=utf-8'
 			 },
-			 data: sc.toUpdate
+			 data: vm.toUpdate
 		};
 		
 		$http(req).then(
 
 			function(res){
-				//sc.maps = res.data;
-				sc.getMaps();
-				sc.toUpdate = angular.copy(sc.modelUpdate);
-				sc.errores= ['status updatetMaps: ',res];
+				//vm.maps = res.data;
+				vm.getMaps();
+				vm.toUpdate = angular.copy(vm.modelUpdate);
+				vm.errores= ['status updatetMaps: ',res];
 				
 			},
 			function(res){
-				sc.errores= ['erro updater: ',res];
+				vm.errores= ['erro updater: ',res];
 			}
 		);
 		
 	};
 	
+	//init
+	vm.init();
 	
-});
+}
+})();

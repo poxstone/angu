@@ -1,52 +1,143 @@
-angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap']);
-angular.module('ui.bootstrap.demo').controller('ModalDemoCtrl', function ($scope, $uibModal, $log) {
+// create angular app
+var app = angular.module('gApp', []);
 
-  $scope.items = ['item1', 'item2', 'item3'];
+app.controller('contr',function($scope,$http){
+	var sc= $scope;
+	sc.errores= [{name:'no hay'}];
+	
+	//models empty
+	sc.modelSave= {
+		name: '',
+		type: '',
+		primary: null
+	};
+	sc.modelDelete= {
+		id: null
+	};
+	sc.modelUpdate= {
+		map: {},
+		name: '',
+		type: '',
+		primary: null
+	};
+	
+	//initialized
+	sc.init = function(){
+	    //call it here
+		sc.toSave = angular.copy(sc.modelSave);
+		sc.toDelete = angular.copy(sc.modelDelete);
+		sc.toUpdate = angular.copy(sc.modelUpdate);
+		sc.getMaps();
+	};
+	//select edit object
+	sc.selectUpdate= function(){
 
-  $scope.animationsEnabled = true;
+		sc.toUpdate.name = sc.toUpdate.map.name;
+		sc.toUpdate.type = sc.toUpdate.map.type;
+		sc.toUpdate.primary = sc.toUpdate.map.primary;
 
-  $scope.open = function (size) {
+	};
+	
+	//methods
+	sc.getMaps = function(){
+		var req = {
+			 method: 'get',
+			 url: '/api',
+			 headers: {
+			   'Content-Type': 'application/json; charset=utf-8'
+			 },
+			 data: { test: 'test' }
+		};
+		
+		$http(req).then(
 
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'myModalContent.html',
-      controller: 'ModalInstanceCtrl',
-      size: size,
-      resolve: {
-        items: function () {
-          return $scope.items;
-        }
-      }
-    });
+			function(res){
+				sc.maps = res.data;
+				//sc.errores= ['status getMaps: ',res];
+			},
+			function(res){
+				sc.errores= ['erro getMaps: ',res];
+			}
+		);
+	};
+		
+	sc.saveMap = function(){
+		var req = {
+			 method: 'post',
+			 url: '/api',
+			 headers: {
+			   'Content-Type': 'application/json; charset=utf-8'
+			 },
+			 data: sc.toSave
+		};
+		
+		$http(req).then(
 
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
+			function(res){
+				sc.maps = res.data;
+				sc.getMaps();
+				sc.toSave = angular.copy(sc.modelSave);
+				sc.errores= ['status saveMaps: ',res];
+				
+			},
+			function(res){
+				sc.errores= ['erro save: ',res];
+			}
+		);
+	};
+	
+	sc.deleteMaps = function(){
+		console.log(sc.toDelete._id);
+		var req = {
+			 method: 'delete',
+			 url: '/api/'+sc.toDelete._id,
+			 /*headers: {
+			   'Content-Type': 'application/json; charset=utf-8'
+			 },
+			 data: sc.toDelete*/
+		};
+		
+		$http(req).then(
 
-  $scope.toggleAnimation = function () {
-    $scope.animationsEnabled = !$scope.animationsEnabled;
-  };
+			function(res){
+				sc.maps = res.data;
+				sc.getMaps();
+				//sc.toDelete = angular.copy(sc.modelDelete);
+				sc.errores= ['status deleteMaps: ',res];
+			},
+			function(res){
+				sc.errores= ['erro delete: ',res];
+			}
+		);
+		
+	};
+	
+	sc.updateMap = function(){
+		console.log(sc.toUpdate);
+		var req = {
+			 method: 'put',
+			 url: '/api/'+sc.toUpdate.map._id,
+			 headers: {
+			   'Content-Type': 'application/json; charset=utf-8'
+			 },
+			 data: sc.toUpdate
+		};
+		
+		$http(req).then(
 
-});
-
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $uibModal service used above.
-
-angular.module('ui.bootstrap.demo').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
-
-  $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
-  };
+			function(res){
+				//sc.maps = res.data;
+				sc.getMaps();
+				sc.toUpdate = angular.copy(sc.modelUpdate);
+				sc.errores= ['status updatetMaps: ',res];
+				
+			},
+			function(res){
+				sc.errores= ['erro updater: ',res];
+			}
+		);
+		
+	};
+	
+	
 });

@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var stylus = require('stylus');
 var nib = require('nib');
-var imagePlaceholder = require('img-placeholder');
+//var imagePlaceholder = require('img-placeholder');
 
 //conect to the base
 mongoose.connect('mongodb://localhost:27017/map');
@@ -28,7 +28,7 @@ function compile(str, path) {
     .set('compress', true);
     //.import('nib');
 }
-
+/*
 app.use( imagePlaceholder({
   maxWidth : 10000,
   maxHeight : 10000,
@@ -36,7 +36,7 @@ app.use( imagePlaceholder({
   textStyle : '#FFF',
   fontSizeParam : 6
   
-}) );
+}) );*/
 
 app.use(stylus.middleware({
   src: __dirname + '/public/css',

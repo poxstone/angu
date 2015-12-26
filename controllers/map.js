@@ -3,7 +3,7 @@ var Map = require('../models/map');
 //save maps
 exports.postMaps = function(req, res){
 	var map = new Map();
-	console.log(req.body);
+	console.log('notificacion req.body: ',req.body);
 	map.name = req.body.name || null;
 	map.type = req.body.type || null;
 	map.primary = req.body.primary || false;
@@ -30,7 +30,7 @@ exports.getMaps = function(req, res){
 	
   Map.find(function(err, maps) {
     if (err)
-      res.send(err);
+      res.send(errx	);
 
     res.json(maps);
   });
@@ -52,7 +52,7 @@ exports.getMap = function(req, res){
 
 //modify
 exports.putMap = function(req, res){
-	console.log('bOODy:',req.body);
+	console.log('notificacion req.body: ',req.body);
 	Map.findById(req.params.map_id, function(err, map){
 
 		if(err){
@@ -81,7 +81,7 @@ exports.putMap = function(req, res){
 };
 
 exports.deleteMap = function(req, res){
-	console.log(req.params);
+	console.log('notificacion req.body: ',req.body);
 	
 	Map.findById(req.params.map_id, function(err){
 		if(err){

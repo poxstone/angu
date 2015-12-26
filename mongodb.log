@@ -1833,3 +1833,255 @@
 2015-12-23T12:59:17.248-0500 I NETWORK  [conn43] end connection 127.0.0.1:55037 (4 connections now open)
 2015-12-23T12:59:17.248-0500 I NETWORK  [conn42] end connection 127.0.0.1:55036 (4 connections now open)
 2015-12-23T12:59:17.248-0500 I NETWORK  [conn45] end connection 127.0.0.1:55039 (3 connections now open)
+2015-12-24T06:55:41.857-0500 I CONTROL  CTRL_CLOSE_EVENT signal
+2015-12-24T06:55:41.858-0500 I CONTROL  [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+2015-12-24T06:55:41.859-0500 I CONTROL  [consoleTerminate] now exiting
+2015-12-24T06:55:41.859-0500 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2015-12-24T06:55:41.860-0500 I NETWORK  [consoleTerminate] closing listening socket: 540
+2015-12-24T06:55:41.860-0500 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2015-12-24T06:55:41.860-0500 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2015-12-24T06:55:41.860-0500 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2015-12-24T06:55:41.860-0500 I STORAGE  [consoleTerminate] shutdown: final commit...
+2015-12-24T06:55:41.862-0500 I JOURNAL  [consoleTerminate] journalCleanup...
+2015-12-24T06:55:41.862-0500 I JOURNAL  [consoleTerminate] removeJournalFiles
+2015-12-24T06:55:41.863-0500 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2015-12-24T06:55:41.963-0500 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-12-24T06:55:41.963-0500 I JOURNAL  [durability] Durability thread stopped
+2015-12-24T06:55:41.964-0500 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2015-12-24T06:55:41.973-0500 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2015-12-24T06:55:41.973-0500 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2015-12-24T06:55:41.973-0500 I CONTROL  [consoleTerminate] dbexit:  rc: 12
+2015-12-24T06:56:58.543-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-12-24T06:56:58.566-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2015-12-24T06:56:58.566-0500 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-12-24T06:56:58.584-0500 I JOURNAL  [durability] Durability thread started
+2015-12-24T06:56:58.585-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-24T06:56:58.585-0500 I CONTROL  [initandlisten] MongoDB starting : pid=2940 port=27017 dbpath=data 64-bit host=poxstone-m
+2015-12-24T06:56:58.586-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-24T06:56:58.586-0500 I CONTROL  [initandlisten] db version v3.0.7
+2015-12-24T06:56:58.586-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-12-24T06:56:58.586-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-24T06:56:58.586-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-24T06:56:58.586-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2015-12-24T06:56:58.597-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-26T08:51:29.557-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-12-26T08:51:29.569-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2015-12-26T08:51:29.569-0500 I JOURNAL  [initandlisten] recover begin
+2015-12-26T08:51:29.569-0500 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2015-12-26T08:51:29.570-0500 I JOURNAL  [initandlisten] recover lsn: 0
+2015-12-26T08:51:29.570-0500 I JOURNAL  [initandlisten] recover data\journal\j._0
+2015-12-26T08:51:29.575-0500 I JOURNAL  [initandlisten] recover cleaning up
+2015-12-26T08:51:29.576-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2015-12-26T08:51:29.576-0500 I JOURNAL  [initandlisten] recover done
+2015-12-26T08:51:29.597-0500 I JOURNAL  [durability] Durability thread started
+2015-12-26T08:51:29.597-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-26T08:51:29.598-0500 I CONTROL  [initandlisten] MongoDB starting : pid=8884 port=27017 dbpath=data 64-bit host=poxstone-m
+2015-12-26T08:51:29.598-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-26T08:51:29.598-0500 I CONTROL  [initandlisten] db version v3.0.7
+2015-12-26T08:51:29.598-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-12-26T08:51:29.598-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-26T08:51:29.598-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-26T08:51:29.599-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2015-12-26T08:51:29.612-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-26T08:52:50.731-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62024 #1 (1 connection now open)
+2015-12-26T08:52:50.731-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62025 #2 (2 connections now open)
+2015-12-26T08:52:50.732-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62026 #3 (3 connections now open)
+2015-12-26T08:52:50.732-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62027 #4 (4 connections now open)
+2015-12-26T08:52:50.732-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62028 #5 (5 connections now open)
+2015-12-26T09:21:27.539-0500 I NETWORK  [conn2] end connection 127.0.0.1:62025 (4 connections now open)
+2015-12-26T09:21:27.539-0500 I NETWORK  [conn3] end connection 127.0.0.1:62026 (4 connections now open)
+2015-12-26T09:21:27.539-0500 I NETWORK  [conn5] end connection 127.0.0.1:62028 (4 connections now open)
+2015-12-26T09:21:27.539-0500 I NETWORK  [conn4] end connection 127.0.0.1:62027 (4 connections now open)
+2015-12-26T09:21:27.539-0500 I NETWORK  [conn1] end connection 127.0.0.1:62024 (4 connections now open)
+2015-12-26T09:21:28.298-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62108 #6 (1 connection now open)
+2015-12-26T09:21:28.298-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62109 #7 (2 connections now open)
+2015-12-26T09:21:28.298-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62110 #8 (3 connections now open)
+2015-12-26T09:21:28.299-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62111 #9 (4 connections now open)
+2015-12-26T09:21:28.299-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62112 #10 (5 connections now open)
+2015-12-26T09:21:51.201-0500 I NETWORK  [conn6] end connection 127.0.0.1:62108 (4 connections now open)
+2015-12-26T09:21:51.202-0500 I NETWORK  [conn9] end connection 127.0.0.1:62111 (4 connections now open)
+2015-12-26T09:21:51.201-0500 I NETWORK  [conn7] end connection 127.0.0.1:62109 (4 connections now open)
+2015-12-26T09:21:51.201-0500 I NETWORK  [conn8] end connection 127.0.0.1:62110 (4 connections now open)
+2015-12-26T09:21:51.202-0500 I NETWORK  [conn10] end connection 127.0.0.1:62112 (4 connections now open)
+2015-12-26T09:21:51.953-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62116 #11 (1 connection now open)
+2015-12-26T09:21:51.953-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62117 #12 (2 connections now open)
+2015-12-26T09:21:51.954-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62118 #13 (3 connections now open)
+2015-12-26T09:21:51.954-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62119 #14 (4 connections now open)
+2015-12-26T09:21:51.954-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62120 #15 (5 connections now open)
+2015-12-26T09:22:24.267-0500 I NETWORK  [conn12] end connection 127.0.0.1:62117 (4 connections now open)
+2015-12-26T09:22:24.267-0500 I NETWORK  [conn13] end connection 127.0.0.1:62118 (4 connections now open)
+2015-12-26T09:22:24.268-0500 I NETWORK  [conn11] end connection 127.0.0.1:62116 (2 connections now open)
+2015-12-26T09:22:24.268-0500 I NETWORK  [conn15] end connection 127.0.0.1:62120 (2 connections now open)
+2015-12-26T09:22:24.268-0500 I NETWORK  [conn14] end connection 127.0.0.1:62119 (2 connections now open)
+2015-12-26T09:22:25.021-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62122 #16 (1 connection now open)
+2015-12-26T09:22:25.021-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62123 #17 (2 connections now open)
+2015-12-26T09:22:25.022-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62124 #18 (3 connections now open)
+2015-12-26T09:22:25.022-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62125 #19 (4 connections now open)
+2015-12-26T09:22:25.022-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62126 #20 (5 connections now open)
+2015-12-26T09:22:51.449-0500 I NETWORK  [conn16] end connection 127.0.0.1:62122 (4 connections now open)
+2015-12-26T09:22:51.449-0500 I NETWORK  [conn19] end connection 127.0.0.1:62125 (4 connections now open)
+2015-12-26T09:22:51.449-0500 I NETWORK  [conn18] end connection 127.0.0.1:62124 (4 connections now open)
+2015-12-26T09:22:51.449-0500 I NETWORK  [conn17] end connection 127.0.0.1:62123 (4 connections now open)
+2015-12-26T09:22:51.449-0500 I NETWORK  [conn20] end connection 127.0.0.1:62126 (4 connections now open)
+2015-12-26T09:22:52.203-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62128 #21 (1 connection now open)
+2015-12-26T09:22:52.203-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62129 #22 (2 connections now open)
+2015-12-26T09:22:52.203-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62130 #23 (3 connections now open)
+2015-12-26T09:22:52.203-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62131 #24 (4 connections now open)
+2015-12-26T09:22:52.204-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62132 #25 (5 connections now open)
+2015-12-26T09:24:28.283-0500 I NETWORK  [conn23] end connection 127.0.0.1:62130 (4 connections now open)
+2015-12-26T09:24:28.283-0500 I NETWORK  [conn21] end connection 127.0.0.1:62128 (4 connections now open)
+2015-12-26T09:24:28.284-0500 I NETWORK  [conn24] end connection 127.0.0.1:62131 (2 connections now open)
+2015-12-26T09:24:28.284-0500 I NETWORK  [conn25] end connection 127.0.0.1:62132 (1 connection now open)
+2015-12-26T09:24:28.284-0500 I NETWORK  [conn22] end connection 127.0.0.1:62129 (2 connections now open)
+2015-12-26T09:24:29.051-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62146 #26 (1 connection now open)
+2015-12-26T09:24:29.051-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62147 #27 (2 connections now open)
+2015-12-26T09:24:29.051-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62148 #28 (3 connections now open)
+2015-12-26T09:24:29.051-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62149 #29 (4 connections now open)
+2015-12-26T09:24:29.052-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62150 #30 (5 connections now open)
+2015-12-26T09:30:30.147-0500 I NETWORK  [conn29] end connection 127.0.0.1:62149 (4 connections now open)
+2015-12-26T09:30:30.147-0500 I NETWORK  [conn26] end connection 127.0.0.1:62146 (4 connections now open)
+2015-12-26T09:30:30.147-0500 I NETWORK  [conn27] end connection 127.0.0.1:62147 (4 connections now open)
+2015-12-26T09:30:30.147-0500 I NETWORK  [conn28] end connection 127.0.0.1:62148 (4 connections now open)
+2015-12-26T09:30:30.147-0500 I NETWORK  [conn30] end connection 127.0.0.1:62150 (4 connections now open)
+2015-12-26T09:30:30.896-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62161 #31 (1 connection now open)
+2015-12-26T09:30:30.896-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62162 #32 (2 connections now open)
+2015-12-26T09:30:30.896-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62163 #33 (3 connections now open)
+2015-12-26T09:30:30.896-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62164 #34 (4 connections now open)
+2015-12-26T09:30:30.897-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62165 #35 (5 connections now open)
+2015-12-26T09:31:04.971-0500 I NETWORK  [conn34] end connection 127.0.0.1:62164 (4 connections now open)
+2015-12-26T09:31:04.971-0500 I NETWORK  [conn31] end connection 127.0.0.1:62161 (4 connections now open)
+2015-12-26T09:31:04.971-0500 I NETWORK  [conn33] end connection 127.0.0.1:62163 (4 connections now open)
+2015-12-26T09:31:04.971-0500 I NETWORK  [conn32] end connection 127.0.0.1:62162 (4 connections now open)
+2015-12-26T09:31:04.971-0500 I NETWORK  [conn35] end connection 127.0.0.1:62165 (0 connections now open)
+2015-12-26T09:31:05.711-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62168 #36 (1 connection now open)
+2015-12-26T09:31:05.711-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62169 #37 (2 connections now open)
+2015-12-26T09:31:05.711-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62170 #38 (3 connections now open)
+2015-12-26T09:31:05.711-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62171 #39 (4 connections now open)
+2015-12-26T09:31:05.712-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62172 #40 (5 connections now open)
+2015-12-26T09:38:40.838-0500 I NETWORK  [conn37] end connection 127.0.0.1:62169 (4 connections now open)
+2015-12-26T09:38:40.838-0500 I NETWORK  [conn36] end connection 127.0.0.1:62168 (4 connections now open)
+2015-12-26T09:38:40.838-0500 I NETWORK  [conn38] end connection 127.0.0.1:62170 (4 connections now open)
+2015-12-26T09:38:40.838-0500 I NETWORK  [conn39] end connection 127.0.0.1:62171 (4 connections now open)
+2015-12-26T09:38:40.838-0500 I NETWORK  [conn40] end connection 127.0.0.1:62172 (3 connections now open)
+2015-12-26T09:38:41.591-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62268 #41 (1 connection now open)
+2015-12-26T09:38:41.591-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62269 #42 (2 connections now open)
+2015-12-26T09:38:41.591-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62270 #43 (3 connections now open)
+2015-12-26T09:38:41.591-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62271 #44 (4 connections now open)
+2015-12-26T09:38:41.592-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62272 #45 (5 connections now open)
+2015-12-26T09:40:38.410-0500 I NETWORK  [conn41] end connection 127.0.0.1:62268 (4 connections now open)
+2015-12-26T09:40:38.410-0500 I NETWORK  [conn43] end connection 127.0.0.1:62270 (4 connections now open)
+2015-12-26T09:40:38.410-0500 I NETWORK  [conn44] end connection 127.0.0.1:62271 (4 connections now open)
+2015-12-26T09:40:38.410-0500 I NETWORK  [conn42] end connection 127.0.0.1:62269 (4 connections now open)
+2015-12-26T09:40:38.410-0500 I NETWORK  [conn45] end connection 127.0.0.1:62272 (4 connections now open)
+2015-12-26T09:40:39.149-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62278 #46 (1 connection now open)
+2015-12-26T09:40:39.149-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62279 #47 (2 connections now open)
+2015-12-26T09:40:39.149-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62280 #48 (3 connections now open)
+2015-12-26T09:40:39.150-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62281 #49 (4 connections now open)
+2015-12-26T09:40:39.150-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62282 #50 (5 connections now open)
+2015-12-26T10:26:15.638-0500 I NETWORK  [conn46] end connection 127.0.0.1:62278 (4 connections now open)
+2015-12-26T10:26:15.638-0500 I NETWORK  [conn48] end connection 127.0.0.1:62280 (4 connections now open)
+2015-12-26T10:26:15.638-0500 I NETWORK  [conn47] end connection 127.0.0.1:62279 (4 connections now open)
+2015-12-26T10:26:15.638-0500 I NETWORK  [conn49] end connection 127.0.0.1:62281 (4 connections now open)
+2015-12-26T10:26:15.639-0500 I NETWORK  [conn50] end connection 127.0.0.1:62282 (1 connection now open)
+2015-12-26T10:26:17.713-0500 I CONTROL  Ctrl-C signal
+2015-12-26T10:26:17.713-0500 I CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2015-12-26T10:26:17.716-0500 I CONTROL  [consoleTerminate] now exiting
+2015-12-26T10:26:17.716-0500 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2015-12-26T10:26:17.716-0500 I NETWORK  [consoleTerminate] closing listening socket: 548
+2015-12-26T10:26:17.716-0500 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2015-12-26T10:26:17.716-0500 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2015-12-26T10:26:17.716-0500 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2015-12-26T10:26:17.716-0500 I STORAGE  [consoleTerminate] shutdown: final commit...
+2015-12-26T10:26:17.718-0500 I JOURNAL  [consoleTerminate] journalCleanup...
+2015-12-26T10:26:17.718-0500 I JOURNAL  [consoleTerminate] removeJournalFiles
+2015-12-26T10:26:17.718-0500 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2015-12-26T10:26:17.819-0500 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-12-26T10:26:17.819-0500 I JOURNAL  [durability] Durability thread stopped
+2015-12-26T10:26:17.819-0500 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2015-12-26T10:26:17.825-0500 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2015-12-26T10:26:17.826-0500 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2015-12-26T10:26:17.826-0500 I CONTROL  [consoleTerminate] dbexit:  rc: 12
+2015-12-26T10:27:06.458-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-12-26T10:27:06.470-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2015-12-26T10:27:06.470-0500 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-12-26T10:27:06.496-0500 I JOURNAL  [durability] Durability thread started
+2015-12-26T10:27:06.496-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-26T10:27:06.497-0500 I CONTROL  [initandlisten] MongoDB starting : pid=4408 port=27017 dbpath=data 64-bit host=poxstone-m
+2015-12-26T10:27:06.497-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-26T10:27:06.497-0500 I CONTROL  [initandlisten] db version v3.0.7
+2015-12-26T10:27:06.497-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-12-26T10:27:06.497-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-26T10:27:06.497-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-26T10:27:06.497-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2015-12-26T10:27:06.514-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-26T10:27:11.887-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64419 #1 (1 connection now open)
+2015-12-26T10:27:11.887-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64420 #2 (2 connections now open)
+2015-12-26T10:27:11.887-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64421 #3 (3 connections now open)
+2015-12-26T10:27:11.887-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64422 #4 (4 connections now open)
+2015-12-26T10:27:11.888-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64423 #5 (5 connections now open)
+2015-12-26T10:27:41.880-0500 I NETWORK  [conn2] end connection 127.0.0.1:64420 (4 connections now open)
+2015-12-26T10:27:41.880-0500 I NETWORK  [conn4] end connection 127.0.0.1:64422 (4 connections now open)
+2015-12-26T10:27:41.880-0500 I NETWORK  [conn1] end connection 127.0.0.1:64419 (4 connections now open)
+2015-12-26T10:27:41.880-0500 I NETWORK  [conn3] end connection 127.0.0.1:64421 (4 connections now open)
+2015-12-26T10:27:41.880-0500 I NETWORK  [conn5] end connection 127.0.0.1:64423 (4 connections now open)
+2015-12-26T10:27:42.693-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64435 #6 (1 connection now open)
+2015-12-26T10:27:42.693-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64436 #7 (2 connections now open)
+2015-12-26T10:27:42.693-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64437 #8 (3 connections now open)
+2015-12-26T10:27:42.694-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64438 #9 (4 connections now open)
+2015-12-26T10:27:42.694-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64439 #10 (5 connections now open)
+2015-12-26T10:27:50.817-0500 I NETWORK  [conn9] end connection 127.0.0.1:64438 (4 connections now open)
+2015-12-26T10:27:50.818-0500 I NETWORK  [conn10] end connection 127.0.0.1:64439 (3 connections now open)
+2015-12-26T10:27:50.818-0500 I NETWORK  [conn6] end connection 127.0.0.1:64435 (3 connections now open)
+2015-12-26T10:27:50.818-0500 I NETWORK  [conn7] end connection 127.0.0.1:64436 (1 connection now open)
+2015-12-26T10:27:50.818-0500 I NETWORK  [conn8] end connection 127.0.0.1:64437 (1 connection now open)
+2015-12-26T10:27:51.605-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64445 #11 (1 connection now open)
+2015-12-26T10:27:51.606-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64446 #12 (2 connections now open)
+2015-12-26T10:27:51.606-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64447 #13 (3 connections now open)
+2015-12-26T10:27:51.606-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64448 #14 (4 connections now open)
+2015-12-26T10:27:51.607-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64449 #15 (5 connections now open)
+2015-12-26T10:28:15.840-0500 I NETWORK  [conn15] end connection 127.0.0.1:64449 (4 connections now open)
+2015-12-26T10:28:15.840-0500 I NETWORK  [conn11] end connection 127.0.0.1:64445 (3 connections now open)
+2015-12-26T10:28:15.840-0500 I NETWORK  [conn13] end connection 127.0.0.1:64447 (3 connections now open)
+2015-12-26T10:28:15.840-0500 I NETWORK  [conn12] end connection 127.0.0.1:64446 (3 connections now open)
+2015-12-26T10:28:15.840-0500 I NETWORK  [conn14] end connection 127.0.0.1:64448 (3 connections now open)
+2015-12-26T10:28:16.609-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64466 #16 (1 connection now open)
+2015-12-26T10:28:16.609-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64467 #17 (2 connections now open)
+2015-12-26T10:28:16.609-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64468 #18 (3 connections now open)
+2015-12-26T10:28:16.610-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64469 #19 (4 connections now open)
+2015-12-26T10:28:16.610-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64470 #20 (5 connections now open)
+2015-12-26T10:28:19.247-0500 I NETWORK  [conn17] end connection 127.0.0.1:64467 (4 connections now open)
+2015-12-26T10:28:19.247-0500 I NETWORK  [conn19] end connection 127.0.0.1:64469 (4 connections now open)
+2015-12-26T10:28:19.248-0500 I NETWORK  [conn18] end connection 127.0.0.1:64468 (4 connections now open)
+2015-12-26T10:28:19.248-0500 I NETWORK  [conn20] end connection 127.0.0.1:64470 (4 connections now open)
+2015-12-26T10:28:19.248-0500 I NETWORK  [conn16] end connection 127.0.0.1:64466 (4 connections now open)
+2015-12-26T10:28:20.014-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64471 #21 (1 connection now open)
+2015-12-26T10:28:20.014-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64472 #22 (2 connections now open)
+2015-12-26T10:28:20.014-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64473 #23 (3 connections now open)
+2015-12-26T10:28:20.014-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64474 #24 (4 connections now open)
+2015-12-26T10:28:20.015-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64475 #25 (5 connections now open)
+2015-12-26T10:28:22.177-0500 I NETWORK  [conn22] end connection 127.0.0.1:64472 (4 connections now open)
+2015-12-26T10:28:22.177-0500 I NETWORK  [conn24] end connection 127.0.0.1:64474 (4 connections now open)
+2015-12-26T10:28:22.177-0500 I NETWORK  [conn25] end connection 127.0.0.1:64475 (3 connections now open)
+2015-12-26T10:28:22.177-0500 I NETWORK  [conn23] end connection 127.0.0.1:64473 (4 connections now open)
+2015-12-26T10:28:22.177-0500 I NETWORK  [conn21] end connection 127.0.0.1:64471 (4 connections now open)
+2015-12-26T10:28:22.937-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64476 #26 (1 connection now open)
+2015-12-26T10:28:22.937-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64477 #27 (2 connections now open)
+2015-12-26T10:28:22.937-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64478 #28 (3 connections now open)
+2015-12-26T10:28:22.937-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64479 #29 (4 connections now open)
+2015-12-26T10:28:22.937-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64480 #30 (5 connections now open)
+2015-12-26T10:28:29.637-0500 I NETWORK  [conn26] end connection 127.0.0.1:64476 (4 connections now open)
+2015-12-26T10:28:29.637-0500 I NETWORK  [conn27] end connection 127.0.0.1:64477 (4 connections now open)
+2015-12-26T10:28:29.637-0500 I NETWORK  [conn28] end connection 127.0.0.1:64478 (4 connections now open)
+2015-12-26T10:28:29.637-0500 I NETWORK  [conn29] end connection 127.0.0.1:64479 (4 connections now open)
+2015-12-26T10:28:29.637-0500 I NETWORK  [conn30] end connection 127.0.0.1:64480 (4 connections now open)
+2015-12-26T10:28:30.384-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64481 #31 (1 connection now open)
+2015-12-26T10:28:30.385-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64482 #32 (2 connections now open)
+2015-12-26T10:28:30.385-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64483 #33 (3 connections now open)
+2015-12-26T10:28:30.385-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64484 #34 (4 connections now open)
+2015-12-26T10:28:30.385-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64485 #35 (5 connections now open)
+2015-12-26T10:30:24.855-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64491 #36 (6 connections now open)
+2015-12-26T10:44:34.613-0500 I NETWORK  [conn31] end connection 127.0.0.1:64481 (5 connections now open)
+2015-12-26T10:44:34.613-0500 I NETWORK  [conn32] end connection 127.0.0.1:64482 (5 connections now open)
+2015-12-26T10:44:34.613-0500 I NETWORK  [conn33] end connection 127.0.0.1:64483 (5 connections now open)
+2015-12-26T10:44:34.613-0500 I NETWORK  [conn34] end connection 127.0.0.1:64484 (5 connections now open)
+2015-12-26T10:44:34.614-0500 I NETWORK  [conn35] end connection 127.0.0.1:64485 (2 connections now open)

@@ -47,7 +47,7 @@ function ConttlCrud($http){
 	vm.getMaps = function(){
 		var req = {
 			 method: 'get',
-			 url: '/api',
+			 url: '/api/maps',
 			 headers: {
 			   'Content-Type': 'application/json; charset=utf-8'
 			 },
@@ -69,7 +69,7 @@ function ConttlCrud($http){
 	vm.saveMap = function(){
 		var req = {
 			 method: 'post',
-			 url: '/api',
+			 url: '/api/maps',
 			 headers: {
 			   'Content-Type': 'application/json; charset=utf-8'
 			 },
@@ -95,7 +95,7 @@ function ConttlCrud($http){
 		console.log(vm.toDelete._id);
 		var req = {
 			 method: 'delete',
-			 url: '/api/'+vm.toDelete._id,
+			 url: '/api/maps/'+vm.toDelete._id,
 			 /*headers: {
 			   'Content-Type': 'application/json; charset=utf-8'
 			 },
@@ -121,7 +121,7 @@ function ConttlCrud($http){
 		console.log(vm.toUpdate);
 		var req = {
 			 method: 'put',
-			 url: '/api/'+vm.toUpdate.map._id,
+			 url: '/api/maps/'+vm.toUpdate.map._id,
 			 headers: {
 			   'Content-Type': 'application/json; charset=utf-8'
 			 },

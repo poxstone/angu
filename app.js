@@ -7,14 +7,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var stylus = require('stylus');
 var nib = require('nib');
-//var imagePlaceholder = require('img-placeholder');
+var imagePlaceholder = require('img-placeholder');
 
 //conect to the base
 mongoose.connect('mongodb://localhost:27017/map');
 
 var api = require('./routes/api');
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -34,15 +33,15 @@ app.use( stylus.middleware({
   debug: true,
   force: true
 }) );
-/*
+
+//http://localost/genimg/100x400.png
 app.use( imagePlaceholder({
   maxWidth : 10000,
   maxHeight : 10000,
   backgroundStyle : '#AFD7FF',
   textStyle : '#FFF',
   fontSizeParam : 6
-  
-}) );*/
+}) );
 
 //app.use( express.static(path.join(__dirname, 'public')));
 
@@ -60,7 +59,6 @@ app.use( express.static(path.join(__dirname, 'bower_components')) );
 
 app.use( '/api', api );
 app.use( '/', routes );
-app.use( '/users', users );
 
 // catch 404 and forward to error handler
 

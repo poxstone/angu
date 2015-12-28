@@ -2599,3 +2599,63 @@
 2015-12-27T17:23:22.849+0000 [conn3] end connection 127.0.0.1:45180 (4 connections now open)
 2015-12-27T17:23:22.849+0000 [conn1] end connection 127.0.0.1:45176 (4 connections now open)
 2015-12-27T17:23:22.849+0000 [conn5] end connection 127.0.0.1:45184 (4 connections now open)
+2015-12-27T15:15:27.929-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-12-27T15:15:27.944-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2015-12-27T15:15:27.950-0500 I JOURNAL  [initandlisten] recover begin
+2015-12-27T15:15:27.950-0500 I JOURNAL  [initandlisten] recover lsn: 356050
+2015-12-27T15:15:27.950-0500 I JOURNAL  [initandlisten] recover data\journal\j._0
+2015-12-27T15:15:27.950-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:356050
+2015-12-27T15:15:27.956-0500 I JOURNAL  [initandlisten] recover cleaning up
+2015-12-27T15:15:27.956-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2015-12-27T15:15:27.956-0500 I JOURNAL  [initandlisten] recover done
+2015-12-27T15:15:27.974-0500 I JOURNAL  [durability] Durability thread started
+2015-12-27T15:15:27.974-0500 I CONTROL  [initandlisten] MongoDB starting : pid=6692 port=27017 dbpath=data 64-bit host=poxstone-m
+2015-12-27T15:15:27.974-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-27T15:15:27.974-0500 I CONTROL  [initandlisten] db version v3.0.7
+2015-12-27T15:15:27.974-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-12-27T15:15:27.974-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-27T15:15:27.975-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-27T15:15:27.975-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-27T15:15:27.975-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2015-12-27T15:15:27.989-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-27T15:48:17.617-0500 I CONTROL  CTRL_CLOSE_EVENT signal
+2015-12-27T15:48:17.618-0500 I CONTROL  [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+2015-12-27T15:48:17.618-0500 I CONTROL  [consoleTerminate] now exiting
+2015-12-27T15:48:17.618-0500 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2015-12-27T15:48:17.618-0500 I NETWORK  [consoleTerminate] closing listening socket: 552
+2015-12-27T15:48:17.618-0500 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2015-12-27T15:48:17.618-0500 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2015-12-27T15:48:17.618-0500 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2015-12-27T15:48:17.618-0500 I STORAGE  [consoleTerminate] shutdown: final commit...
+2015-12-27T15:48:17.625-0500 I JOURNAL  [consoleTerminate] journalCleanup...
+2015-12-27T15:48:17.626-0500 I JOURNAL  [consoleTerminate] removeJournalFiles
+2015-12-27T15:48:17.626-0500 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2015-12-27T15:48:17.721-0500 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-12-27T15:48:17.721-0500 I JOURNAL  [durability] Durability thread stopped
+2015-12-27T15:48:17.721-0500 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2015-12-27T15:48:17.724-0500 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2015-12-27T15:48:17.724-0500 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2015-12-27T15:48:17.724-0500 I CONTROL  [consoleTerminate] dbexit:  rc: 12
+2015-12-27T19:19:45.449-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-12-27T19:19:45.463-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2015-12-27T19:19:45.463-0500 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-12-27T19:19:45.482-0500 I JOURNAL  [durability] Durability thread started
+2015-12-27T19:19:45.482-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-27T19:19:45.483-0500 I CONTROL  [initandlisten] MongoDB starting : pid=11196 port=27017 dbpath=data 64-bit host=poxstone-m
+2015-12-27T19:19:45.483-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-27T19:19:45.483-0500 I CONTROL  [initandlisten] db version v3.0.7
+2015-12-27T19:19:45.483-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-12-27T19:19:45.483-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-27T19:19:45.483-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-27T19:19:45.483-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2015-12-27T19:19:45.496-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-27T19:19:59.553-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62320 #1 (1 connection now open)
+2015-12-27T19:19:59.553-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62321 #2 (2 connections now open)
+2015-12-27T19:19:59.553-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62322 #3 (3 connections now open)
+2015-12-27T19:19:59.554-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62323 #4 (4 connections now open)
+2015-12-27T19:19:59.554-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62324 #5 (5 connections now open)
+2015-12-27T19:21:00.850-0500 I NETWORK  [conn1] end connection 127.0.0.1:62320 (4 connections now open)
+2015-12-27T19:21:00.850-0500 I NETWORK  [conn2] end connection 127.0.0.1:62321 (3 connections now open)
+2015-12-27T19:21:00.851-0500 I NETWORK  [conn3] end connection 127.0.0.1:62322 (2 connections now open)
+2015-12-27T19:21:00.851-0500 I NETWORK  [conn4] end connection 127.0.0.1:62323 (1 connection now open)
+2015-12-27T19:21:00.851-0500 I NETWORK  [conn5] end connection 127.0.0.1:62324 (0 connections now open)

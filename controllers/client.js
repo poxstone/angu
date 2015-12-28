@@ -8,14 +8,11 @@ exports.postClients = function(req, res) {
 		// Create a new instance of the Client model
 		var client = new Client();
 
-		console.log('posteo: ',req.body);
-
 		// Set the client properties that came from the POST data
 		client.name = req.body.name || null;
 		client.id = req.body.id || null;
 		client.secret = req.body.secret || null;
 		client.userId = req.user._id || null;
-		console.log('posteo: ',client);
 
 		if( req.body.name && req.body.id && req.body.secret && req.user._id ){
 

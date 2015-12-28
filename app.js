@@ -10,6 +10,7 @@ var nib = require('nib');
 var imagePlaceholder = require('img-placeholder');
 var passport = require('passport');
 var authController = require('./controllers/auth');
+var session = require('express-session');
 
 //conect to the base
 mongoose.connect('mongodb://localhost:27017/map');
@@ -45,11 +46,17 @@ app.use( imagePlaceholder({
   fontSizeParam : 6
 }) );
 
-//app.use( express.static(path.join(__dirname, 'public')));
+// Use express session support since OAuth2orize requires it
+app.use(session({
+  secret: 'Super Secret Session Key',
+  saveUninitialized: true,
+  resave: true
+}));
 
 // Use the passport package in our application
 app.use(passport.initialize());
 
+//app.use( express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 

@@ -7,6 +7,7 @@ exports.postMaps = function(req, res){
 	map.name = req.body.name || null;
 	map.type = req.body.type || null;
 	map.primary = req.body.primary || false;
+	map.userId = req.body.userId || null;
 
 	if(map.name && map.type){
 
@@ -36,6 +37,19 @@ exports.getMaps = function(req, res){
   });
 };
 
+//expecific map by user
+exports.getMapuser = function(req, res){
+	console.log('busqueda: ', req.params.user_id);
+	Map.find({ userId: req.params.user_id }, function(err, map){
+
+		if(err){
+			res.send(err);
+		}else{
+			res.json(map);
+		}
+
+	});
+};
 
 //expecific map
 exports.getMap = function(req, res){
@@ -52,7 +66,6 @@ exports.getMap = function(req, res){
 
 //modify
 exports.putMap = function(req, res){
-	console.log('notificacion req.body: ',req.body);
 	Map.findById(req.params.map_id, function(err, map){
 
 		if(err){
@@ -61,6 +74,7 @@ exports.putMap = function(req, res){
 			map.name = req.body.name || null;
 			map.type = req.body.type || null;
 			map.primary = req.body.primary || false;
+			map.userId = req.body.userId || null;
 
 			if(map.name && map.type){
 				map.save(function(err){

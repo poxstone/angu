@@ -11,6 +11,7 @@ function ConttlCrud($http){
 	
 	//models empty
 	vm.modelSave= {
+		userId: '',
 		name: '',
 		type: '',
 		primary: null
@@ -19,6 +20,7 @@ function ConttlCrud($http){
 		id: null
 	};
 	vm.modelUpdate= {
+		userId: '',
 		map: {},
 		name: '',
 		type: '',

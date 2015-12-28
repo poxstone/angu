@@ -15,7 +15,9 @@ block content
     hr
     h2 POST-Insert
     label name:
-      input(type='text',ng-model='crud.toSave.name')  
+      input(type='text',ng-model='crud.toSave.name')
+    label userId:
+      input(type='text',ng-model='crud.toSave.userId')  
     label type:
       input(type='text',ng-model='crud.toSave.type')  
     label primary
@@ -26,6 +28,8 @@ block content
     h2 Update
     label selec to update
       select(ng-options="map as map.name for map in crud.maps",ng-model="crud.toUpdate.map",ng-change="crud.selectUpdate()")
+    abel userId:
+      input(type='text',ng-model='crud.toUpdate.userId') 
     label name
       input(type='text',ng-model='crud.toUpdate.name')  
     label type

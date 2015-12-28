@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var stylus = require('stylus');
 var nib = require('nib');
 var imagePlaceholder = require('img-placeholder');
+var passport = require('passport');
+var authController = require('./controllers/auth');
 
 //conect to the base
 mongoose.connect('mongodb://localhost:27017/map');
@@ -45,6 +47,9 @@ app.use( imagePlaceholder({
 
 //app.use( express.static(path.join(__dirname, 'public')));
 
+// Use the passport package in our application
+app.use(passport.initialize());
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -57,7 +62,7 @@ app.use( cookieParser() );
 app.use( express.static(path.join(__dirname, 'public')) );
 app.use( express.static(path.join(__dirname, 'bower_components')) );
 
-app.use( '/api', api );
+app.use( '/api', authController.isAuthenticated, api );
 app.use( '/', routes );
 
 // catch 404 and forward to error handler

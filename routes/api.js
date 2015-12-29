@@ -27,6 +27,6 @@ router.post('/clients/', authController.isAuthenticated, perro, clientController
 module.exports = router;
 
 function perro(req,res,next){
-	console.log('HOLAAAAA','gato: ');
+	//console.log('HOLAAAAA',req.user );
 	next();
 }

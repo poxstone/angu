@@ -4,8 +4,8 @@ html
     meta(charset='utf-8')
     title=title
   body
-    p Hi {user.username}
-    p:b {client.name} is requesting <b>full access to your account.</b>
+    h1 Hi <q>#{user.username}</q>
+    p:b <q>#{client.name}</q> is requesting <b>full access to your account.</b>
     p Do you approve?
 
     form(action="/api/oauth2/authorize",method="post")

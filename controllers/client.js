@@ -3,7 +3,6 @@ var Client = require('../models/client');
 
 // Create endpoint /api/client for POST
 exports.postClients = function(req, res) {
-	console.log('req.user._id: ',req.user._id);
 
 	// Create a new instance of the Client model
 	var client = new Client();

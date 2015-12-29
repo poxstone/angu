@@ -4206,3 +4206,51 @@
 2015-12-29T12:16:31.078-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64498 #285 (5 connections now open)
 2015-12-29T12:16:31.078-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:64499 #286 (6 connections now open)
 2015-12-29T12:40:07.704-0500 I NETWORK  [conn156] end connection 127.0.0.1:61703 (5 connections now open)
+2015-12-29T14:09:42.910-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-12-29T14:09:42.936-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover begin
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover lsn: 5939961
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover data\journal\j._0
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:5939961
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:3387255 < lsn:5939961
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:3921576 < lsn:5939961
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:3980876 < lsn:5939961
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:5761821 < lsn:5939961
+2015-12-29T14:09:42.937-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:5821201 < lsn:5939961
+2015-12-29T14:09:42.948-0500 I JOURNAL  [initandlisten] recover cleaning up
+2015-12-29T14:09:42.948-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2015-12-29T14:09:42.949-0500 I JOURNAL  [initandlisten] recover done
+2015-12-29T14:09:42.969-0500 I JOURNAL  [durability] Durability thread started
+2015-12-29T14:09:42.969-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-29T14:09:42.970-0500 I CONTROL  [initandlisten] MongoDB starting : pid=1060 port=27017 dbpath=data 64-bit host=poxstone-m
+2015-12-29T14:09:42.970-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-29T14:09:42.970-0500 I CONTROL  [initandlisten] db version v3.0.7
+2015-12-29T14:09:42.970-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-12-29T14:09:42.970-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-29T14:09:42.970-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-29T14:09:42.970-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2015-12-29T14:09:42.984-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-29T14:12:33.376-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-12-29T14:12:33.395-0500 W -        [initandlisten] Detected unclean shutdown - data\mongod.lock is not empty.
+2015-12-29T14:12:33.402-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2015-12-29T14:12:33.402-0500 I JOURNAL  [initandlisten] recover begin
+2015-12-29T14:12:33.402-0500 I JOURNAL  [initandlisten] recover lsn: 0
+2015-12-29T14:12:33.402-0500 I JOURNAL  [initandlisten] recover data\journal\j._0
+2015-12-29T14:12:33.417-0500 I JOURNAL  [initandlisten] recover cleaning up
+2015-12-29T14:12:33.417-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2015-12-29T14:12:33.417-0500 I JOURNAL  [initandlisten] recover done
+2015-12-29T14:12:33.435-0500 I JOURNAL  [durability] Durability thread started
+2015-12-29T14:12:33.435-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-29T14:12:33.435-0500 I CONTROL  [initandlisten] MongoDB starting : pid=4288 port=27017 dbpath=data 64-bit host=poxstone-m
+2015-12-29T14:12:33.435-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-12-29T14:12:33.435-0500 I CONTROL  [initandlisten] db version v3.0.7
+2015-12-29T14:12:33.435-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-12-29T14:12:33.435-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-12-29T14:12:33.435-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-29T14:12:33.435-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2015-12-29T14:12:33.448-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-29T14:12:37.368-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49518 #1 (1 connection now open)
+2015-12-29T14:12:37.368-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49519 #2 (2 connections now open)
+2015-12-29T14:12:37.368-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49520 #3 (3 connections now open)
+2015-12-29T14:12:37.369-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49521 #4 (4 connections now open)
+2015-12-29T14:12:37.369-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49522 #5 (5 connections now open)

@@ -6,7 +6,6 @@ var User = require('../models/user');
 var Client = require('../models/client');
 var Token = require('../models/token');
 
-
 passport.use(new BasicStrategy(
   function(username, password, callback) {
     User.findOne({ username: username }, function (err, user) {

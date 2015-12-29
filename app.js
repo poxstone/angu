@@ -9,7 +9,6 @@ var stylus = require('stylus');
 var nib = require('nib');
 var imagePlaceholder = require('img-placeholder');
 var passport = require('passport');
-var authController = require('./controllers/auth');
 var session = require('express-session');
 
 //conect to the base
@@ -69,7 +68,7 @@ app.use( cookieParser() );
 app.use( express.static(path.join(__dirname, 'public')) );
 app.use( express.static(path.join(__dirname, 'bower_components')) );
 
-app.use( '/api', authController.isAuthenticated, api );
+app.use( '/api', api );
 app.use( '/', routes );
 
 // catch 404 and forward to error handler

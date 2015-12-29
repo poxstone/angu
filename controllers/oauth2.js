@@ -9,13 +9,16 @@ var Code = require('../models/code');
 // Create OAuth 2.0 server
 var server = oauth2orize.createServer();
 
+
 // Register serialialization function
 server.serializeClient(function(client, callback) {
+	console.log('1 - server.serializeClient::::::',client._id);
   return callback(null, client._id);
 });
 
 // Register deserialization function
 server.deserializeClient(function(id, callback) {
+	console.log('2 - server.deserializeClient::::::');
   Client.findOne({ _id: id }, function (err, client) {
     if (err) { return callback(err); }
     return callback(null, client);
@@ -24,6 +27,7 @@ server.deserializeClient(function(id, callback) {
 
 // Register authorization code grant type
 server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, callback) {
+	console.log('3 - server.grant::::::');
   // Create a new authorization code
   var code = new Code({
     value: uid(16),
@@ -31,10 +35,13 @@ server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, ca
     redirectUri: redirectUri,
     userId: user._id
   });
+   console.log('4 - coooodigo - CREATE: ',code);
 
   // Save the auth code and check for errors
   code.save(function(err) {
     if (err) { return callback(err); }
+
+    console.log('5 - coooodigo - SAVE: ',code);
 
     callback(null, code.value);
   });
@@ -42,6 +49,7 @@ server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, ca
 
 // Exchange authorization codes for access tokens
 server.exchange(oauth2orize.exchange.code(function(client, code, redirectUri, callback) {
+	console.log('6 - server.exchange::::::');
   Code.findOne({ value: code }, function (err, authCode) {
     if (err) { return callback(err); }
     if (authCode === undefined) { return callback(null, false); }
@@ -72,6 +80,7 @@ server.exchange(oauth2orize.exchange.code(function(client, code, redirectUri, ca
 // User authorization endpoint
 exports.authorization = [
   server.authorization(function(clientId, redirectUri, callback) {
+	console.log('7 - server.authorization::::::');
 
     Client.findOne({ id: clientId }, function (err, client) {
       if (err) { return callback(err); }
@@ -97,6 +106,7 @@ exports.token = [
 
 // Utility functions to generate unique identifiers
 function uid (len) {
+	console.log('9 - uid::::::');
   var buf = []
     , chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     , charlen = chars.length;

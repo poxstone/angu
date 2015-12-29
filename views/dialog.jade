@@ -4,11 +4,11 @@ html
     meta(charset='utf-8')
     title=title
   body
-    h1 Hi <q>#{user.username}</q>
+    h1 Hi <q>#{user.username}</q> - <q>#{transactionID}</q>
     p:b <q>#{client.name}</q> is requesting <b>full access to your account.</b>
     p Do you approve?
 
-    form(action="/api/oauth2/authorize",method="post")
+    form(action="/oauth2/authorize",method="post")
       input(name="transaction_id",type="hidden",value="#{transactionID}")
       fieldset
         input(type="submit",value="Allow",id="allow")

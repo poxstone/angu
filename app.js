@@ -16,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/map');
 
 var api = require('./routes/api');
 var routes = require('./routes/index');
+var oauth2 = require('./routes/oauth2');
 
 var app = express();
 
@@ -69,6 +70,7 @@ app.use( express.static(path.join(__dirname, 'public')) );
 app.use( express.static(path.join(__dirname, 'bower_components')) );
 
 app.use( '/api', api );
+app.use( '/oauth2', oauth2 );
 app.use( '/', routes );
 
 // catch 404 and forward to error handler

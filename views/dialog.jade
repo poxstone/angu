@@ -9,7 +9,7 @@ html
     p Do you approve?
 
     form(action="/api/oauth2/authorize",method="post")
-      input(name="transaction_id",type="hidden",value="{transactionID}")
+      input(name="transaction_id",type="hidden",value="#{transactionID}")
       fieldset
         input(type="submit",value="Allow",id="allow")
         input(type="submit",value="Deny",name="cancel" id="deny")

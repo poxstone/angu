@@ -9,6 +9,6 @@ router.get('/authorize', authController.isAuthenticated, oauth2Controller.author
   .post('/authorize', authController.isAuthenticated, oauth2Controller.decision);
 
 // Create endpoint handlers for oauth2 token
-router.post('/token', authController.isClientAuthenticated, oauth2Controller.token);
+router.post('/token', authController.isClientAuthenticated, oauth2Controller.token); 
 
 module.exports = router;

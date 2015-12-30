@@ -27,7 +27,7 @@ server.deserializeClient(function(id, callback) {
 
 // Register authorization code grant type
 server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, callback) {
-	console.log('3 - server.grant::::::');
+	console.log('3 - server.grant::::::', ares);
   // Create a new authorization code
   var code = new Code({
     value: uid(16),
@@ -35,7 +35,6 @@ server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, ca
     redirectUri: redirectUri,
     userId: user._id
   });
-   console.log('4 - coooodigo - CREATE: ',code);
 
   // Save the auth code and check for errors
   code.save(function(err) {
@@ -66,6 +65,7 @@ server.exchange(oauth2orize.exchange.code(function(client, code, redirectUri, ca
         clientId: authCode.clientId,
         userId: authCode.userId
       });
+			console.log('6A - server.exchange::::::', token);
 
       // Save the access token and check for errors
       token.save(function (err) {

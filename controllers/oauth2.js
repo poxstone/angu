@@ -6,6 +6,25 @@ var Client = require('../models/client');
 var Token = require('../models/token');
 var Code = require('../models/code');
 
+// User authorization endpoint
+// Utility functions to generate unique identifiers
+function uid (len) {
+	console.log('9 - uid::::::');
+  var buf = []
+    , chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    , charlen = chars.length;
+
+  for (var i = 0; i < len; ++i) {
+    buf.push(chars[getRandomInt(0, charlen - 1)]);
+  }
+
+  return buf.join('');
+};
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // Create OAuth 2.0 server
 var server = oauth2orize.createServer();
 
@@ -77,7 +96,7 @@ server.exchange(oauth2orize.exchange.code(function(client, code, redirectUri, ca
   });
 }));
 
-// User authorization endpoint
+
 exports.authorization = [
   server.authorization(function(clientId, redirectUri, callback) {
 	console.log('7 - server.authorization::::::');
@@ -103,21 +122,3 @@ exports.token = [
   server.token(),
   server.errorHandler()
 ];
-
-// Utility functions to generate unique identifiers
-function uid (len) {
-	console.log('9 - uid::::::');
-  var buf = []
-    , chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    , charlen = chars.length;
-
-  for (var i = 0; i < len; ++i) {
-    buf.push(chars[getRandomInt(0, charlen - 1)]);
-  }
-
-  return buf.join('');
-};
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}

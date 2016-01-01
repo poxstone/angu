@@ -5360,3 +5360,37 @@
 2015-12-30T07:09:59.668-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55694 #556 (3 connections now open)
 2015-12-30T07:09:59.668-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55695 #557 (4 connections now open)
 2015-12-30T07:09:59.668-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55696 #558 (5 connections now open)
+2016-01-01T16:01:56.044-0500 I CONTROL  ***** SERVER RESTARTED *****
+2016-01-01T16:01:56.049-0500 W -        [initandlisten] Detected unclean shutdown - data\mongod.lock is not empty.
+2016-01-01T16:01:56.055-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2016-01-01T16:01:56.055-0500 I JOURNAL  [initandlisten] recover begin
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover lsn: 27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover data\journal\j._0
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:5993416 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:6112211 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:7061036 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:7535121 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:8902791 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:9261961 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:9860607 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section seq:9920457 < lsn:27219638
+2016-01-01T16:01:56.056-0500 I JOURNAL  [initandlisten] recover skipping application of section more...
+2016-01-01T16:01:56.067-0500 I JOURNAL  [initandlisten] recover cleaning up
+2016-01-01T16:01:56.067-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2016-01-01T16:01:56.068-0500 I JOURNAL  [initandlisten] recover done
+2016-01-01T16:01:56.086-0500 I JOURNAL  [durability] Durability thread started
+2016-01-01T16:01:56.087-0500 I JOURNAL  [journal writer] Journal writer thread started
+2016-01-01T16:01:56.087-0500 I CONTROL  [initandlisten] MongoDB starting : pid=9548 port=27017 dbpath=data 64-bit host=poxstone-m
+2016-01-01T16:01:56.087-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-01-01T16:01:56.087-0500 I CONTROL  [initandlisten] db version v3.0.7
+2016-01-01T16:01:56.087-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2016-01-01T16:01:56.087-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2016-01-01T16:01:56.087-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-01-01T16:01:56.087-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2016-01-01T16:01:56.104-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-01-01T16:01:59.377-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55622 #1 (1 connection now open)
+2016-01-01T16:02:14.916-0500 I INDEX    [conn1] allocating new ns file data\test.ns, filling with zeroes...
+2016-01-01T16:02:14.965-0500 I STORAGE  [FileAllocator] allocating new datafile data\test.0, filling with zeroes...
+2016-01-01T16:02:14.965-0500 I STORAGE  [FileAllocator] creating directory data\_tmp
+2016-01-01T16:02:14.970-0500 I STORAGE  [FileAllocator] done allocating datafile data\test.0, size: 16MB,  took 0.003 secs

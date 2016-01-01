@@ -5394,3 +5394,148 @@
 2016-01-01T16:02:14.965-0500 I STORAGE  [FileAllocator] allocating new datafile data\test.0, filling with zeroes...
 2016-01-01T16:02:14.965-0500 I STORAGE  [FileAllocator] creating directory data\_tmp
 2016-01-01T16:02:14.970-0500 I STORAGE  [FileAllocator] done allocating datafile data\test.0, size: 16MB,  took 0.003 secs
+2016-01-01T16:26:59.964-0500 I CONTROL  ***** SERVER RESTARTED *****
+2016-01-01T16:26:59.978-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2016-01-01T16:26:59.978-0500 I JOURNAL  [initandlisten] recover begin
+2016-01-01T16:26:59.979-0500 I JOURNAL  [initandlisten] recover lsn: 0
+2016-01-01T16:26:59.979-0500 I JOURNAL  [initandlisten] recover data\journal\j._0
+2016-01-01T16:26:59.984-0500 I STORAGE  [initandlisten] recover create file data\test.ns 16MB
+2016-01-01T16:27:00.032-0500 I STORAGE  [initandlisten] recover create file data\test.0 16MB
+2016-01-01T16:27:00.083-0500 I JOURNAL  [initandlisten] recover cleaning up
+2016-01-01T16:27:00.084-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2016-01-01T16:27:00.085-0500 I JOURNAL  [initandlisten] recover done
+2016-01-01T16:27:00.112-0500 I JOURNAL  [durability] Durability thread started
+2016-01-01T16:27:00.113-0500 I JOURNAL  [journal writer] Journal writer thread started
+2016-01-01T16:27:00.113-0500 I CONTROL  [initandlisten] MongoDB starting : pid=8260 port=27017 dbpath=data 64-bit host=poxstone-m
+2016-01-01T16:27:00.113-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-01-01T16:27:00.113-0500 I CONTROL  [initandlisten] db version v3.0.7
+2016-01-01T16:27:00.113-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2016-01-01T16:27:00.114-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2016-01-01T16:27:00.114-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-01-01T16:27:00.114-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2016-01-01T16:27:00.160-0500 I -        [initandlisten] Assertion: 13440:bad offset:0 accessing file: D:/htdocs/PER/angu/data/local.0. See http://dochub.mongodb.org/core/data-recovery
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\stacktrace_win.cpp(175)                        mongo::printStackTrace+0x43
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\log.cpp(134)                                   mongo::logContext+0x97
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\assert_util.cpp(219)                           mongo::msgasserted+0xd7
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\assert_util.cpp(211)                           mongo::msgasserted+0x13
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\data_file.cpp(84)                mongo::DataFile::badOfs+0x18e
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\mmap_v1_extent_manager.cpp(289)  mongo::MmapV1ExtentManager::recordForV1+0x3a
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\record_store_v1_base.cpp(171)    mongo::RecordStoreV1Base::dataFor+0xa9
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\btree\btree_logic.cpp(2421)      mongo::BtreeLogic<mongo::BtreeLayoutV1>::getBucket+0x33
+2016-01-01T16:27:00.641-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\btree\btree_logic.h(559)         mongo::BtreeLogic<mongo::BtreeLayoutV1>::getBucket+0x2b
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\btree\btree_logic.cpp(2247)      mongo::BtreeLogic<mongo::BtreeLayoutV1>::_insert+0x2a3
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\btree\btree_logic.cpp(2192)      mongo::BtreeLogic<mongo::BtreeLayoutV1>::insert+0x395
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\mmap_v1\btree\btree_interface.cpp(87)    mongo::BtreeInterfaceImpl<mongo::BtreeLayoutV1>::insert+0xf8
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\index\btree_based_access_method.cpp(81)          mongo::BtreeBasedAccessMethod::insert+0x123
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\catalog\index_catalog.cpp(1020)                  mongo::IndexCatalog::_indexRecord+0xa0
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\catalog\index_catalog.cpp(1052)                  mongo::IndexCatalog::indexRecord+0x6d
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\catalog\collection.cpp(243)                      mongo::Collection::_insertDocument+0x128
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\catalog\collection.cpp(196)                      mongo::Collection::insertDocument+0x1bd
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(279)                                      mongo::logStartup+0x8f3
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(661)                                      mongo::_initAndListen+0x12cb
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(668)                                      mongo::initAndListen+0x27
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(906)                                      mongoDbMain+0x209
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(707)                                      wmain+0x35
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] mongod.exe    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c(623)                   __tmainCRTStartup+0x10f
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] KERNEL32.DLL                                                                    BaseThreadInitThunk+0x22
+2016-01-01T16:27:00.642-0500 I CONTROL  [initandlisten] 
+2016-01-01T16:27:00.643-0500 I STORAGE  [initandlisten] exception in initAndListen: 13440 bad offset:0 accessing file: D:/htdocs/PER/angu/data/local.0. See http://dochub.mongodb.org/core/data-recovery, terminating
+2016-01-01T16:27:00.643-0500 I CONTROL  [initandlisten] now exiting
+2016-01-01T16:27:00.643-0500 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2016-01-01T16:27:00.643-0500 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2016-01-01T16:27:00.643-0500 I NETWORK  [initandlisten] shutdown: going to close sockets...
+2016-01-01T16:27:00.643-0500 I STORAGE  [initandlisten] shutdown: waiting for fs preallocator...
+2016-01-01T16:27:00.643-0500 I STORAGE  [initandlisten] shutdown: final commit...
+2016-01-01T16:27:00.650-0500 I JOURNAL  [initandlisten] journalCleanup...
+2016-01-01T16:27:00.654-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2016-01-01T16:27:00.654-0500 I JOURNAL  [initandlisten] Terminating durability thread ...
+2016-01-01T16:27:00.747-0500 I JOURNAL  [journal writer] Journal writer thread stopped
+2016-01-01T16:27:00.747-0500 I JOURNAL  [durability] Durability thread stopped
+2016-01-01T16:27:00.747-0500 I STORAGE  [initandlisten] shutdown: closing all files...
+2016-01-01T16:27:00.754-0500 I STORAGE  [initandlisten] closeAllFiles() finished
+2016-01-01T16:27:00.754-0500 I STORAGE  [initandlisten] shutdown: removing fs lock...
+2016-01-01T16:27:00.755-0500 I CONTROL  [initandlisten] dbexit:  rc: 100
+2016-01-01T16:31:05.333-0500 I CONTROL  ***** SERVER RESTARTED *****
+2016-01-01T16:31:05.348-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2016-01-01T16:31:05.348-0500 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2016-01-01T16:31:05.368-0500 I JOURNAL  [durability] Durability thread started
+2016-01-01T16:31:05.368-0500 I JOURNAL  [journal writer] Journal writer thread started
+2016-01-01T16:31:05.369-0500 I CONTROL  [initandlisten] MongoDB starting : pid=8480 port=27017 dbpath=data 64-bit host=poxstone-m
+2016-01-01T16:31:05.369-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-01-01T16:31:05.369-0500 I CONTROL  [initandlisten] db version v3.0.7
+2016-01-01T16:31:05.369-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2016-01-01T16:31:05.369-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2016-01-01T16:31:05.369-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-01-01T16:31:05.369-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2016-01-01T16:31:05.381-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-01-01T16:33:08.338-0500 I CONTROL  ***** SERVER RESTARTED *****
+2016-01-01T16:33:08.345-0500 W -        [initandlisten] Detected unclean shutdown - data\mongod.lock is not empty.
+2016-01-01T16:33:08.354-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2016-01-01T16:33:08.354-0500 I JOURNAL  [initandlisten] recover begin
+2016-01-01T16:33:08.354-0500 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2016-01-01T16:33:08.355-0500 I JOURNAL  [initandlisten] recover lsn: 0
+2016-01-01T16:33:08.355-0500 I JOURNAL  [initandlisten] recover data\journal\j._0
+2016-01-01T16:33:08.365-0500 I JOURNAL  [initandlisten] recover cleaning up
+2016-01-01T16:33:08.365-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2016-01-01T16:33:08.366-0500 I JOURNAL  [initandlisten] recover done
+2016-01-01T16:33:08.384-0500 I JOURNAL  [durability] Durability thread started
+2016-01-01T16:33:08.384-0500 I JOURNAL  [journal writer] Journal writer thread started
+2016-01-01T16:33:08.384-0500 I CONTROL  [initandlisten] MongoDB starting : pid=5652 port=27017 dbpath=data 64-bit host=poxstone-m
+2016-01-01T16:33:08.384-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-01-01T16:33:08.384-0500 I CONTROL  [initandlisten] db version v3.0.7
+2016-01-01T16:33:08.384-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2016-01-01T16:33:08.384-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2016-01-01T16:33:08.384-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-01-01T16:33:08.384-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2016-01-01T16:33:08.401-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-01-01T16:33:51.703-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49978 #1 (1 connection now open)
+2016-01-01T16:40:26.080-0500 I NETWORK  [conn1] end connection 127.0.0.1:49978 (0 connections now open)
+2016-01-01T16:40:33.229-0500 I CONTROL  Ctrl-C signal
+2016-01-01T16:40:33.229-0500 I CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2016-01-01T16:40:33.229-0500 I CONTROL  [consoleTerminate] now exiting
+2016-01-01T16:40:33.229-0500 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2016-01-01T16:40:33.230-0500 I NETWORK  [consoleTerminate] closing listening socket: 536
+2016-01-01T16:40:33.230-0500 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2016-01-01T16:40:33.230-0500 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2016-01-01T16:40:33.230-0500 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2016-01-01T16:40:33.231-0500 I STORAGE  [consoleTerminate] shutdown: final commit...
+2016-01-01T16:40:33.248-0500 I JOURNAL  [consoleTerminate] journalCleanup...
+2016-01-01T16:40:33.252-0500 I JOURNAL  [consoleTerminate] removeJournalFiles
+2016-01-01T16:40:33.253-0500 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2016-01-01T16:40:33.334-0500 I JOURNAL  [journal writer] Journal writer thread stopped
+2016-01-01T16:40:33.334-0500 I JOURNAL  [durability] Durability thread stopped
+2016-01-01T16:40:33.334-0500 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2016-01-01T16:40:33.341-0500 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2016-01-01T16:40:33.341-0500 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2016-01-01T16:40:33.341-0500 I CONTROL  [consoleTerminate] dbexit:  rc: 12
+2016-01-01T16:40:38.352-0500 I CONTROL  ***** SERVER RESTARTED *****
+2016-01-01T16:40:38.364-0500 I JOURNAL  [initandlisten] journal dir=data\journal
+2016-01-01T16:40:38.364-0500 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2016-01-01T16:40:38.386-0500 I JOURNAL  [durability] Durability thread started
+2016-01-01T16:40:38.387-0500 I JOURNAL  [journal writer] Journal writer thread started
+2016-01-01T16:40:38.388-0500 I CONTROL  [initandlisten] MongoDB starting : pid=6952 port=27017 dbpath=data 64-bit host=poxstone-m
+2016-01-01T16:40:38.388-0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-01-01T16:40:38.388-0500 I CONTROL  [initandlisten] db version v3.0.7
+2016-01-01T16:40:38.388-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2016-01-01T16:40:38.388-0500 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2016-01-01T16:40:38.388-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-01-01T16:40:38.388-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, storage: { dbPath: "data/", journal: { enabled: true }, mmapv1: { smallFiles: true } }, systemLog: { destination: "file", logAppend: true, path: "mongodb.log" } }
+2016-01-01T16:40:38.406-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-01-01T16:40:44.098-0500 I CONTROL  Ctrl-C signal
+2016-01-01T16:40:44.098-0500 I CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2016-01-01T16:40:44.098-0500 I CONTROL  [consoleTerminate] now exiting
+2016-01-01T16:40:44.098-0500 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2016-01-01T16:40:44.098-0500 I NETWORK  [consoleTerminate] closing listening socket: 504
+2016-01-01T16:40:44.098-0500 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2016-01-01T16:40:44.098-0500 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2016-01-01T16:40:44.099-0500 I STORAGE  [consoleTerminate] shutdown: waiting for fs preallocator...
+2016-01-01T16:40:44.099-0500 I STORAGE  [consoleTerminate] shutdown: final commit...
+2016-01-01T16:40:44.116-0500 I JOURNAL  [consoleTerminate] journalCleanup...
+2016-01-01T16:40:44.116-0500 I JOURNAL  [consoleTerminate] removeJournalFiles
+2016-01-01T16:40:44.118-0500 I JOURNAL  [consoleTerminate] Terminating durability thread ...
+2016-01-01T16:40:44.202-0500 I JOURNAL  [journal writer] Journal writer thread stopped
+2016-01-01T16:40:44.203-0500 I JOURNAL  [durability] Durability thread stopped
+2016-01-01T16:40:44.203-0500 I STORAGE  [consoleTerminate] shutdown: closing all files...
+2016-01-01T16:40:44.213-0500 I STORAGE  [consoleTerminate] closeAllFiles() finished
+2016-01-01T16:40:44.213-0500 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2016-01-01T16:40:44.213-0500 I CONTROL  [consoleTerminate] dbexit:  rc: 12

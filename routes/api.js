@@ -16,17 +16,12 @@ router.post('/maps/', authController.isAuthenticated, mapController.postMaps )
 	.delete('/maps/:map_id', authController.isAuthenticated, mapController.deleteMap );
 
 /* GET users listing. */
-router.post('/users/', authController.isAuthenticated, userController.postUsers )
+router.post('/users/', userController.postUsers )
 	.get('/users/', authController.isAuthenticated, userController.getUsers );
 
 /* GET clients listing. */
-router.post('/clients/', authController.isAuthenticated, perro, clientController.postClients )
-	.get('/clients/', authController.isAuthenticated, perro, clientController.getClientsAll )
+router.post('/clients/', authController.isAuthenticated, clientController.postClients )
+	.get('/clients/', authController.isAuthenticated, clientController.getClientsAll )
 	.get('/clients/:client_id', authController.isAuthenticated, clientController.getClients );
 
 module.exports = router;
-
-function perro(req,res,next){
-	//console.log('HOLAAAAA',req.user );
-	next();
-}

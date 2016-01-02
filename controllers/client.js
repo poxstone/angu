@@ -30,7 +30,7 @@ exports.postClients = function(req, res) {
 };
 
 // Create endpoint /api/clients for GET
-exports.getClientsAll = function(req, res) {
+exports.getClientsAll = function(req, res) { 
 	// Use the Client model to find all clients
 	Client.find(function(err, clients) {
 		if (err)

@@ -1,0 +1,21 @@
+extends layout
+block header
+  -//script(src='https://rawgit.com/buberdds/angular-bootstrap-colorpicker/master/js/bootstrap-colorpicker-module.js')
+  script(src='/js/clients.js')
+block content
+  main(ng-app='app'): div(ng-controller='ConttlClients as crudClients')
+    p click to go 
+      a(href="/api/clients") (to clients)
+    small.errors {{crudClients.errores}}
+    hr
+    div(ng-if="crudClients.users") {{crudClients.users}}
+    h2 add/update Clients
+    label name:
+      input(type='text',ng-model='crudClients.toSave.name')
+    label id:
+      input(type='text',ng-model='crudClients.toSave.id')
+    label secret:
+      input(type='password',ng-model='crudClients.toSave.secret')
+    label userId:
+      input(type='text',ng-model='crudClients.toSave.userId')
+    button(ng-click="crudClients.saveUser()") Save user

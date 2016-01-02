@@ -1,6 +1,7 @@
 extends layout
 block header
   -//script(src='https://rawgit.com/buberdds/angular-bootstrap-colorpicker/master/js/bootstrap-colorpicker-module.js')
+  script(src='/js/maps.js')
 block content
   main(ng-app='app'): div(ng-controller='ConttlCrud as crud')
     small.errors {{crud.errores}}

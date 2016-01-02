@@ -16,9 +16,11 @@ function ConttlCrud($http){
 		type: '',
 		primary: null
 	};
+
 	vm.modelDelete= {
 		id: null
 	};
+
 	vm.modelUpdate= {
 		userId: '',
 		map: {},
@@ -27,13 +29,16 @@ function ConttlCrud($http){
 		primary: null
 	};
 	
+	//init
+	init();
+
 	//initialized
-	vm.init = function(){
+	function init(){
 	    //call it here
 		vm.toSave = angular.copy(vm.modelSave);
 		vm.toDelete = angular.copy(vm.modelDelete);
 		vm.toUpdate = angular.copy(vm.modelUpdate);
-		vm.getMaps();
+		getMaps();
 	};
 	
 	//select edit object
@@ -46,7 +51,7 @@ function ConttlCrud($http){
 	};
 	
 	//methods
-	vm.getMaps = function(){
+	function getMaps(){
 		var req = {
 			 method: 'get',
 			 url: '/api/maps',
@@ -146,8 +151,6 @@ function ConttlCrud($http){
 		
 	};
 	
-	//init
-	vm.init();
 	
 }
 })();

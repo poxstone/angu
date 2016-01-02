@@ -1,0 +1,21 @@
+extends layout
+block header
+  -//script(src='https://rawgit.com/buberdds/angular-bootstrap-colorpicker/master/js/bootstrap-colorpicker-module.js')
+  script(src='/js/users.js')
+block content
+  main(ng-app='app'): div(ng-controller='Conttlusers as crudUser')
+    p click 
+      a(href="/maps") here maps
+      | - to access to maps 
+      small previusly you need access user 
+      | and clients 
+      a(href="/clients") (to clients)
+    small.errors {{crudUser.errores}}
+    hr
+    div(ng-if="crudUser.users") {{crudUser.users}}
+    h2 add/update Users
+    label username:
+      input(type='text',ng-model='crudUser.toSave.username')
+    label password:
+      input(type='password',ng-model='crudUser.toSave.password')
+    button(ng-click="crudUser.saveUser()") Save user

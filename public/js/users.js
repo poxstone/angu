@@ -15,7 +15,7 @@ function ConttlCrud($http){
 		password: ''
 	};
 
-	vm.tokenurl= 'http://localhost/token';
+	vm.tokenurl= location.origin+'/token';
 
 	vm.urlSearch = (location.search)? true : false;
 	if(vm.urlSearch){

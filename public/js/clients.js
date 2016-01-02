@@ -13,8 +13,10 @@ function ConttlCrud($http){
 	vm.modelSave= {
 		name: '',
 		passwidord: '',
-		secret: ''
+		secret: '',
+		redirect_uri: location.origin+'/'
 	};
+	vm.oauth2Href = null;
 
 	//init
 	init();
@@ -39,9 +41,9 @@ function ConttlCrud($http){
 
 			function(res){
 				vm.users = res.data;
+				vm.oauth2Href = location.origin+'/oauth2/authorize?client_id='+res.data.data.id+'&response_type=code&redirect_uri='+ vm.toSave.redirect_uri;
 				vm.toSave = angular.copy(vm.modelSave);
 				vm.errores= ['status saveusers: ',res];
-				
 			},
 			function(res){
 				vm.errores= ['erro save: ',res];

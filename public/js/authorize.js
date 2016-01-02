@@ -2,7 +2,7 @@
 (function(){
 'use strict';
 angular.module('app', [])
-.controller('Conttlusers',ConttlCrud);
+.controller('ContAuthorize',ConttlCrud);
 
 function ConttlCrud($http){
 	var vm = this;//$scope
@@ -11,16 +11,10 @@ function ConttlCrud($http){
 	
 	//models empty
 	vm.modelSave= {
-		username: '',
-		password: ''
+		name: '',
+		passwidord: '',
+		secret: ''
 	};
-
-	vm.tokenurl= 'http://localhost/token';
-
-	vm.urlSearch = (location.search)? true : false;
-	if(vm.urlSearch){
-		vm.tokenurl= vm.tokenurl+'?code='+getUrlVars().code;
-	}
 
 	//init
 	init();
@@ -31,22 +25,10 @@ function ConttlCrud($http){
 		vm.toSave = angular.copy(vm.modelSave);
 	};
 
-	function getUrlVars(){
-	  var vars = [], hash;
-	  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-	  for(var i = 0; i < hashes.length; i++)
-	  {
-      hash = hashes[i].split('=');
-      vars.push(hash[0]);
-      vars[hash[0]] = hash[1];
-	  }
-	  return vars;
-	}
-
 	vm.saveUser = function(){
 		var req = {
 			method: 'post',
-			url: '/api/users',
+			url: '/oauth2/authorize',
 			headers: {
 			  'Content-Type': 'application/json; charset=utf-8'
 			},
@@ -64,7 +46,7 @@ function ConttlCrud($http){
 			function(res){
 				vm.errores= ['erro save: ',res];
 			}
-			
+
 		);
 	};
 	

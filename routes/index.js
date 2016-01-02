@@ -11,6 +11,10 @@ router.get('/clients', authController.isAuthenticated, function(req, res, next) 
   res.render('clients', { title: 'add clients' });
 });
 
+router.get('/token', authController.isAuthenticated, function(req, res, next) {
+  res.render('token', { title: 'add token',code: req.query.code });
+});
+
 router.get('/maps', function(req, res, next) {
   //console.log('req.params.user_id: ',req.params.user_id);
   res.header({
@@ -18,11 +22,6 @@ router.get('/maps', function(req, res, next) {
     "etag":"W/\"7c0-j3hkc9STdYut/WOnn1oySQ"//is for cache browser 
   });
   res.render('maps', { title: 'Express' });
-});
-
-router.get('/dialog/', authController.isAuthenticated, function(req, res, next) {
-	//console.log('Clieeeente: ', req.client );
-  res.render('dialog', { title: 'dialog', user: req.user, client: req.client });
 });
 
 module.exports = router;
